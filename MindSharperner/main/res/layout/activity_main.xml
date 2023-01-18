@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+            <Button
+                android:id="@+id/checkAnswer"
+                android:layout_width="278dp"
+                android:layout_height="41dp"
+                android:layout_marginStart="62dp"
+                android:layout_marginEnd="69dp"
+                android:layout_marginBottom="44dp"
+                android:text="CHECK"
+                app:layout_constraintBottom_toTopOf="@+id/textView7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="409dp"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="577dp">
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/UserAnswer"
+                android:layout_width="278dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="62dp"
+                android:layout_marginEnd="69dp"
+                android:layout_marginBottom="1dp"
+                android:hint="Your Answer"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toTopOf="@+id/checkAnswer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="34dp"
+                android:text="Choose Level:"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <TextView
+                android:id="@+id/textViewRandomNum2"
+                android:layout_width="86dp"
+                android:layout_height="63dp"
+                android:layout_marginTop="58dp"
+                android:layout_marginEnd="57dp"
+                android:text="RandomNo2"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+            <TextView
+                android:id="@+id/textViewRandomNum1"
+                android:layout_width="85dp"
+                android:layout_height="63dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="58dp"
+                android:text="RandomNo1"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+            <TextView
+                android:id="@+id/textViewAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="155dp"
+                android:layout_marginTop="66dp"
+                android:layout_marginEnd="196dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewOperator" />
+
+            <TextView
+                android:id="@+id/textViewOperator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="51dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="52dp"
+                android:text="Operation"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/textViewRandomNum2"
+                app:layout_constraintStart_toEndOf="@+id/textViewRandomNum1"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="335dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="17dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                <RadioButton
+                    android:id="@+id/btnGenerateEasy"
+                    android:layout_width="108dp"
+                    android:layout_height="50dp"
+                    android:text="Easy"
+                    tools:layout_editor_absoluteX="38dp"
+                    tools:layout_editor_absoluteY="296dp" />
+
+                <RadioButton
+                    android:id="@+id/btnGenerateMedium"
+                    android:layout_width="108dp"
+                    android:layout_height="50dp"
+                    android:text="Medium"
+                    tools:layout_editor_absoluteX="150dp"
+                    tools:layout_editor_absoluteY="296dp" />
+
+                <RadioButton
+                    android:id="@+id/btnGenerateHard"
+                    android:layout_width="108dp"
+                    android:layout_height="50dp"
+                    android:text="Hard"
+                    tools:layout_editor_absoluteX="290dp"
+                    tools:layout_editor_absoluteY="297dp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="31dp"
+                android:text="Instructions:\nThis is a simple mathematic games which is believe can\ntrain your mind. Two numbers are given randomly based\non your level choice with a mathematic operator. You just \ncalculates the answer, write your answer and press check \nbutton. Every correct answer will give you 1 point and any \nwrong answer will deduct 1 point."
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="155dp"
+                android:layout_marginBottom="27dp"
+                android:text="Point:"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="154dp"
+                android:layout_marginBottom="27dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView7" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
